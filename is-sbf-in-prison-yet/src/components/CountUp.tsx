@@ -10,7 +10,6 @@ export const useCountUp = (startDate: Date) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCountUp(new Date().getTime() - countUpDate.getTime());
-      console.log(getReturnValues(countUp));
     }, 1000);
 
     return () => clearInterval(interval);
