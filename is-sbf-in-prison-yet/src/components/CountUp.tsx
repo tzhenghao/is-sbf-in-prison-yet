@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useCountup = (startDate: string | number | Date) => {
+export const useCountUp = (startDate: string | number | Date) => {
   const countUpDate = new Date(startDate).getTime();
 
   const [countUp, setCountUp] = useState(
