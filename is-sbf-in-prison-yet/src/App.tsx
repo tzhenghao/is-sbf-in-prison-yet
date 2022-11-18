@@ -12,8 +12,10 @@ function App() {
       <header className="App-header">
         <VStack>
           <Text>
-            It has been {days} days, {hours} hours, {minutes} minutes and{' '}
-            {seconds} seconds since FTX, Alameda Research and approximately 130
+            It has been {days} days, {hours} hours, {minutes} minutes and {seconds} seconds
+          </Text>
+          <Text>
+            since FTX, Alameda Research and approximately 130
             additional affliated companies filed for Chapter 11 bankruptcy.
           </Text>
           <Text>
