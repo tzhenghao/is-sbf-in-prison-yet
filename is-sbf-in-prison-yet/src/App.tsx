@@ -20,7 +20,7 @@ function App() {
           </Text>
         </VStack>
         <VStack>
-          <Text>Sam Bankman-Fried is not in prison yet.</Text>
+          <Text>Sam Bankman-Fried is <b>not</b> in prison yet.</Text>
         </VStack>
       </header>
     </div>
