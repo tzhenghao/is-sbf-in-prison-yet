@@ -19,7 +19,7 @@ export const useCountup = (startDate: string | number | Date) => {
 };
 
 const getReturnValues = (countUp: number) => {
-  // calculate time left
+  // calculate time since start time.
   const days = Math.floor(countUp / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
     (countUp % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
