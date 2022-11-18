@@ -9,7 +9,7 @@ RUN yarn
 
 RUN yarn build
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD yarn serve ./build -p 3000 -s -n
+CMD yarn serve ./build -p 80 -s -n
 
