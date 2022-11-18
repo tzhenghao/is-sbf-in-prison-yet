@@ -17,16 +17,27 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "react-scripts start",
+    "eject": "react-scripts eject",
+    "clean": "rm -rf build coverage",
+    "typecheck": "tsc --noEmit -p .",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint --max-warnings 0 \"src/**/*.{ts,tsx}\"",
+    "jest": "react-scripts test --watchAll=false",
+    "test": "yarn lint && yarn typecheck && yarn format:check && yarn jest"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always"
   },
   "browserslist": {
     "production": [
