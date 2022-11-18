@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 
-export const useCountUp = (startDate: string | number | Date) => {
-  const countUpDate = new Date(startDate).getTime();
+export const useCountUp = (startDate: Date) => {
+  const countUpDate = startDate;
 
   const [countUp, setCountUp] = useState(
-    new Date().getTime() - countUpDate,
+    new Date().getTime() - countUpDate.getTime(),
   );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCountUp(new Date().getTime() - countUpDate);
+      setCountUp(new Date().getTime() - countUpDate.getTime());
+      console.log(getReturnValues(new Date().getTime()));
     }, 1000);
 
     return () => clearInterval(interval);
